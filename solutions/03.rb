@@ -337,8 +337,8 @@ module DefaultInvoice
     
     class ThresholdPromotionDescriptor
       def description_of(promotion)
-        "#{promotion.percent}% off of every after the " +
-          "#{NumberUtils.as_ordinal promotion.threshold}"
+        threshold_as_ordinal = NumberUtils.as_ordinal promotion.threshold
+        "#{promotion.percent}% off of every after the #{threshold_as_ordinal}"
       end
     end
     
